@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;600;700&display=swap');
+
+$white-color:#fff;
+$opactiy-black:#14141E;
+$main-color:#212121;
+$bin-color:#000814;
+$opactiy-white:#f8f8f8;
+$yellow-color:#FFC300;
+$blue_color:#0582CA;
+
+*{
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    transition: all .5s; list-style: none;
+}
+body{
+    font-family: 'Inconsolata', monospace;
+    // overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.talkall{
+    h2{
+        font-size: 2rem;
+        position: relative;
+        color: $white-color;
+    }
+}
+// background All Class [about , works , services , contact]
+.bg-color{
+    background-color: #000814;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $bin-color;
+}
+::-webkit-scrollbar-track{
+    background-color: $white-color;
+}
+// Start navbar
+.navbar{
+    background-color: $opactiy-black;
+    &.active{
+        background-color:#001d3d80
+    }
+    z-index: 999999;
+    .navbar-toggler{
+        border: none;
+        transition: all .6s;
+        &:hover{
+            transform: rotate(180deg);
+        }
+        span{
+            color: $white-color;
+            font-size: 1.8rem;
+        }
+    }
+    .navbar-toggler:focus{
+        border: none;
+        box-shadow: 0 0 0 0;
+    }
+    .navbar-brand{
+        color: $white-color;
+        &:hover{
+            color: $white-color;
+        }
+    }
+    .navbar-nav{
+        .nav-link.active , i{
+            color: $white-color;
+        }
+        .nav-link{
+            color: $white-color;
+            font-size: .9rem;
+            &:hover{
+                color: $yellow-color;
+            }
+        }
+        .cursor{
+            cursor: pointer;
+            font-size: 1rem;
+            &:hover{
+                color: $bin-color;
+            }
+        }
+    }
+}
+// Start Home
+.home{
+    .home-box{
+        height: 100vh;
+        background-color: $bin-color;
+        .box-content{
+            color: $white-color;
+            p{
+                font-size: 1.7rem;
+            }
+            h2{
+                font-size: 2.5rem;
+            }
+            h3{
+                font-size: 1.4rem;
+            }
+            .icons{
+                width: 34px;
+                height: 60px;
+                border-radius: 45%;
+                border: 2px solid $yellow-color;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%;
+                    top:2px;
+                    background-color: $opactiy-white;
+                    width: 11px;
+                    height: 11px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: moveDown 3s infinite;
+                }
+            }
+            .btn{
+                color: $bin-color;
+            }
+        }
+        .arrow-up{
+            background-color: $opactiy-black;
+            font-size: 1.2rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 6px;
+            right: 6px;
+            opacity: 0;
+            z-index: 99999;
+            box-shadow: 0px 0px 5px 2px rgba(0 ,0 ,0 ,.3);
+            &.active{
+                opacity: 1;
+            }
+            &:hover{
+                background-color: $yellow-color;
+            }
+            &:hover a{
+                color: $main-color;
+            }
+            a{
+                color: $white-color;
+            }
+        }
+    }
+}
+// Key Frame in Home Animation
+@keyframes moveDown{
+    0%{
+        top: 2%;
+        opacity: 1;
+    }
+    100%{
+        top: 50%;
+        opacity: .1;
+    }
+}
+// Start About
+.about{
+    .image{
+        position: relative;
+        overflow: hidden;
+        &:hover .overflow{
+            top: 0;
+        }
+        .overflow{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0,0,0,.4);
+            z-index: 9999;
+            height: 100%;
+            width: 75%;
+        }
+    }
+    .content{
+        p{
+            font-size: 1.6rem;
+            display: inline-block;
+            color: $white-color;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 40px;
+                left: 0;
+                background-color: $bin-color;
+                width: 100%;
+                height: 1px;
+            }
+        }
+        span{
+            font-size: 1.3rem;
+        }
+    }
+    .about-content{
+        p{
+            font-size: .9rem;
+            color: $opactiy-white;
+        }
+    }
+    .about-user{
+        span{
+            font-size: 1.1rem;
+        }
+        p{
+            font-size: 1rem;
+            a{
+                color: #999;
+                &:hover{
+                    color: $yellow-color;
+                }
+            }
+        }
+    }
+}
+// Start services
+.services{
+    .servies-box{
+        transition: all 1s;
+        h2{
+            font-size: 1.6rem;
+            color: $opactiy-white;
+        }
+        i{
+            color: $yellow-color;
+            font-size: 1.5rem;
+            transition: all .6s .2s;
+        }
+        &:hover{
+            background-color: #fff;
+        }
+        &:hover h2{
+            color: $bin-color;
+        }
+        &:hover i{
+            transform: scale(1.3);
+        }
+    }
+}
+.content-creator{
+    .btn{
+        background-color: $opactiy-black;
+        color: $white-color;
+        transition: all .6s;
+        &:hover{
+            background-color: $blue_color;
+            color: $white-color;
+        }
+    }
+}
+.found_Text{
+    width: 100%; height: 60vh;
+    background-image: url('./Component/Images/Webinar-pana.png');
+    background-position: 0 36%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &.not_found{
+        height: 100vh;
+    }
+    filter: brightness(0.8);
+    .found{
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        margin: auto;
+        height: 0%;
+        h2{
+            color: $bin-color;
+            font-weight: bold;
+            text-align: center;
+            a{
+                color: $blue_color;
+                &:hover{
+                    color: $yellow-color;
+                }
+            }
+            span{
+                font-size: 1.9rem;
+            }
+        }
+    }
+}
+// Start Work
+.works{
+    .work{
+        background-color: $bin-color;
+        border: 1px solid $white-color;
+        h3{
+            color: $opactiy-white;
+        }
+        &:hover{
+            background-color: $white-color;
+            border-color: $blue_color;
+            h3{
+                color: $bin-color;
+            }
+        }
+        .btn{
+            background-color: $blue_color;
+            color: $white-color;
+            transition: all .6s;
+            &:hover{
+                background-color: $bin-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+// Start Skills
+.skills{
+    .title-skills{
+        h4{
+            color: #f1f1f1;
+            span{
+                font-size: 1.3rem;
+                color: $yellow-color;
+            }
+        }
+    }
+    .box-skills{
+        p{
+            color: $white-color;
+        }
+    }
+    .progress{
+        background-color: $white-color;
+        height: 26px;
+        span{
+            background-color: $blue_color;
+            transition: width 1s linear;
+        }
+    }
+}
+// Start Contact
+.contact{
+    .box-contact{
+        i{
+            color: $white-color;
+            font-size: 1.9rem;
+        }
+        h3{
+            font-size: 1.6rem;
+        }
+        span{
+            font-size: 1.2rem;
+            color: $opactiy-white;
+        }
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+    }
+}
+// Start Footer
+footer{
+    background-color: $opactiy-black;
+    color: $white-color;
+    ul{
+        a{
+            color: $white-color;
+            font-size: 1.2rem;
+            &:hover{
+                color: $yellow-color;
+            }
+        }
+    }
+}
+// Landing
+#loading{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    background-color: $bin-color;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    .sk-cube-grid {
+        width: 40px;
+        height: 40px;
+        margin: 100px auto;
+        .sk-cube {
+        width: 30%;
+        height: 30%;
+        background-color: #fff;
+        float: left;
+        -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+        animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+            &.sk-cube1 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; 
+            }
+            &.sk-cube2 {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; 
+            }
+            &.sk-cube3 {
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; 
+            }
+            &.sk-cube4 {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; 
+            }
+            &.sk-cube5 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; 
+            }
+            &.sk-cube6 {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; 
+            }
+            &.sk-cube7 {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+                
+            &.sk-cube8 {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; 
+            }
+            &.sk-cube9 {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; 
+            }
+        }
+    }
+}
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+}
+  
+@keyframes sk-cubeGridScaleDelay {
+0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+} 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+} 
+}
+// Start Media
+@media(max-width:991px){
+    .navbar{
+        .navbar-nav{
+            .nav-link{
+                &:hover{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .home{
+        .home-box{
+            .box-content{
+                p{
+                    font-size: 1.6rem;
+                }
+                h2{
+                    font-size: 2.5rem;
+                }
+                h3{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .about{
+        .image{
+            img{
+                width: 100% !important;
+            }
+            .overflow{
+                width: 100%;
+            }
+        }
+        .content{
+            p{
+                font-size: 1.4rem;
+            }
+            span{
+                font-size: 1.2rem;
+            }
+        }
+        .about-content{
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .home{
+        .home-box{
+            .box-content{
+                p{
+                    font-size: 1.5rem;
+                }
+                h2{
+                    font-size: 2.4rem;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    .about{
+        .content{
+            p{
+                font-size: 1.6rem;
+            }
+            span{
+                font-size: 1.3rem;
+            }
+        }
+        .about-content{
+            p{
+                font-size: 1.2rem;
+            }
+        }
+        .about-skills{
+            h2{
+                font-size: 2.4rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    .talkall{
+        h2{
+            font-size: 2.5rem;
+            &:hover::after{
+                width: 90px;
+            }
+            &::after{
+                width: 50px;
+                top: 60px;
+            }
+        }
+    }
+    .contact{
+        .box-contact{
+            i{
+                font-size: 1.4rem;
+            }
+            h3{
+                font-size: 1.2rem;
+            }
+            span{
+                font-size: 1rem;
+            }
+        }
+    }
+    footer{
+        p{
+            font-size: .9rem;
+        }
+        ul{
+            a{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+@media(max-width:600px){
+    .home{
+        .home-box{
+            .box-content{
+                p{
+                    text-align: center;
+                }
+                h2{
+                    font-size: 1.9rem;
+                }
+                h3{
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .about{
+        .content{
+            p{
+                font-size: 1.3rem;
+            }
+            span{
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .about-content{
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    .found_Text{
+        .found{
+            h2{
+                text-align: center;
+                a{
+                    font-size: 1.6rem;
+                }
+                span{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .skills{
+        .title-skills{
+            h4{
+                font-size: 1rem;
+                span{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .box-skills{
+            p{
+                font-size: .9rem;
+            }
+        }
+    }
+    .talkall{
+        h2{
+            font-size: 1.8rem;
+        }
+    }
+    .contact{
+        .box-contact{
+            i{
+                font-size: 1.2rem;
+            }
+            h3{
+                font-size: 1.1rem;
+            }
+            span{
+                font-size: .9rem;
+            }
+        }
+    }
+    footer{
+        p{
+            font-size: .9rem;
+        }
+        ul{
+            a{
+                color: $white-color;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+@media(max-width:450px){
+    .home{
+        .home-box{
+            .box-content{
+                p{
+                    font-size: 1rem;
+                }
+                h2{
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+                h3{
+                    font-size: .8rem;
+                    text-align: center;
+                }
+            }
+            .btn{
+                font-size: 1rem;
+            }
+        }
+    }
+    .about{
+        .content{
+            p{
+                font-size: 1.3rem;
+                &::after{
+                    height: 0px;
+                }
+            }
+            span{
+                font-size: .8rem;
+            }
+        }
+        .about-content{
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+    .talkall{
+        h2{
+            font-size: 1.6rem;
+            &::after{
+                top: 40px;
+            }
+        }
+    }
+    .found_Text{
+        .found{
+            h2{
+                text-align: center;
+                a{
+                    font-size: 1.6rem;
+                }
+                span{
+                    font-size: 1.6rem;
+                    color: $yellow-color;
+                }
+            }
+        }
+    }
+    .contact{
+        .box-contact{
+            i{
+                font-size: 1.2rem;
+            }
+            h3{
+                font-size: 1.1rem;
+            }
+            span{
+                font-size: .9rem;
+            }
+        }
+    }
+    footer{
+        p{
+            font-size: .9rem;
+        }
+        ul{
+            a{
+                color: $white-color;
+                font-size: .9rem;
+            }
+        }
+    }
+}
