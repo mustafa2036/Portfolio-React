@@ -205,7 +205,8 @@ a{
             }
         }
         span{
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            color: #999;
         }
     }
     .about-content{
@@ -220,6 +221,7 @@ a{
         }
         p{
             font-size: 1rem;
+            color: #999;
             a{
                 color: #999;
                 &:hover{
@@ -761,6 +763,19 @@ footer{
             a{
                 color: $white-color;
                 font-size: .9rem;
+            }
+        }
+    }
+}
+@media(max-width:390px){
+    .found_Text{
+        background-position: center top;
+        height: 40vh;
+        .found{
+            h2{
+                span{
+                    color: #000;
+                }
             }
         }
     }

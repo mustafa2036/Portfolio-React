@@ -49,17 +49,17 @@ export default function About() {
               <ul>
                 <li className="py-2 my-1">
                   <span className="text-capitalize fw-bold">fullname</span> :
-                  <p className="d-inline ps-1 text-muted">
+                  <p className="d-inline ps-1">
                     Mostafa Ramadan Mohamed
                   </p>
                 </li>
                 <li className="py-2 my-1">
                   <span className="text-capitalize fw-bold">Birthday</span> :
-                  <p className="d-inline ps-1 text-muted">29 Aug 2000</p>
+                  <p className="d-inline ps-1">29 Aug 2000</p>
                 </li>
                 <li className="py-2 my-1">
                   <span className="text-capitalize fw-bold">phone number</span> :
-                  <p className="d-inline ps-1 text-muted">01124780896</p>
+                  <p className="d-inline ps-1">01124780896</p>
                 </li>
                 <li className="py-2 my-1">
                   <span className="text-capitalize fw-bold">E-mail</span> :

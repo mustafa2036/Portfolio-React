@@ -250,7 +250,8 @@ a {
 }
 
 .about .content span {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  color: #999;
 }
 
 .about .about-content p {
@@ -264,6 +265,7 @@ a {
 
 .about .about-user p {
   font-size: 1rem;
+  color: #999;
 }
 
 .about .about-user p a {
@@ -750,6 +752,16 @@ footer ul a:hover {
   footer ul a {
     color: #fff;
     font-size: .9rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .found_Text {
+    background-position: center top;
+    height: 40vh;
+  }
+  .found_Text .found h2 span {
+    color: #000;
   }
 }
 /*# sourceMappingURL=index.css.map */
